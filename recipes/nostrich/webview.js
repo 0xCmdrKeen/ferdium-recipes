@@ -13,13 +13,14 @@ module.exports = Ferdium => {
 
     localStorage.setItem(
       `nostrich:theme::${account}`,
-      JSON.stringify({ v: theme, at: Date.now() })
+      JSON.stringify({ v: theme, at: Date.now() }),
     );
   });
 
   const getMessages = () => {
-    const hasUnreads = 
-      document.querySelectorAll('nav li a[href] span.rounded-full').length;
+    const hasUnreads = document.querySelectorAll(
+      'nav li a[href] span.rounded-full',
+    ).length;
 
     Ferdium.setBadge(0, hasUnreads ? 1 : 0);
   };
