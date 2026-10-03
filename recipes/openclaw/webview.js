@@ -7,7 +7,7 @@ const _path = _interopRequireDefault(require('path'));
 module.exports = Ferdium => {
   const getMessages = () => {
     const notifications = Ferdium.safeParseInt(
-      document.querySelector('.sidebar-issues-button__count')?.textContent
+      document.querySelector('.sidebar-issues-button__count')?.textContent,
     );
 
     Ferdium.setBadge(notifications, 0);
